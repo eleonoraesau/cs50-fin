@@ -1,7 +1,5 @@
 <h1>MINOR CHASE<h1>
-<video>
-  <source src="https://youtu.be/m5723teTTPE" type="video/mp4">
-</video>
+[My Final Project presentation](https://youtu.be/m5723teTTPE)
 <h2>Description:<h2>
 <p>My name is Eleonora Esau and I have completed a coding bootcamp prior to taking the CS50x course.
 We learnt Ruby on Rails and some JavaScript. Since then I took a dive into React.js, which this website is also built with.
