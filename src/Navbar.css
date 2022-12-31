@@ -1,0 +1,21 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 2;
+  position: absolute;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+.home,
+.quiz,
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}

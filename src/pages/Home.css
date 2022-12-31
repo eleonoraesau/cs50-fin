@@ -1,0 +1,10 @@
+h1, h2, h3 {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
