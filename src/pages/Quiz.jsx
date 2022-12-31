@@ -8,17 +8,17 @@ import { Survey } from 'survey-react-ui';
 StylesManager.applyTheme("defaultV2");
 
 const surveyJson = {
-  // title: "QUIZ TIME",
+  // title: "MINOR CHASE",
   showProgressBar: "bottom",
-  showTimerPanel: "bottom",
-  startSurveyText: "Start Quiz",
+  showTimerPanel: "top",
   maxTimeToFinishPage: 20,
-  maxTimeToFinish: 50,
+  maxTimeToFinish: 60,
   firstPageIsStarted: true,
+  startSurveyText: "Start Quiz",
   pages: [{
     elements: [{
       type: "html",
-      html: "You are about to start a quiz on your trivial knowledge. <br>You will have 20 seconds for every question and 50 seconds to end the quiz.<br>Enter your name below and click <b>Start Quiz</b> to begin."
+      html: "You will have 20 seconds for every question and 50 seconds to end the quiz. Enter your name below and click <b>Start Quiz</b> to begin. Finish all questions and check your results in the end 😉"
     }, {
       type: "text",
       name: "username",
@@ -28,7 +28,7 @@ const surveyJson = {
   }, {
     elements: [{
       type: "radiogroup",
-      name: "civilwar",
+      name: "border",
       title: "Which two countries share the longest international border?",
       choicesOrder: "random",
       choices: [
@@ -39,7 +39,7 @@ const surveyJson = {
   }, {
     elements: [{
       type: "radiogroup",
-      name: "libertyordeath",
+      name: "donor",
       title: "What blood type qualifies as a universal donor?",
       choicesOrder: "random",
       choices: [
@@ -50,7 +50,7 @@ const surveyJson = {
   }, {
     elements: [{
       type: "radiogroup",
-      name: "magnacarta",
+      name: "movie",
       title: "What does the “R” stand for on the rating of a movie?",
       choicesOrder: "random",
       choices: [
@@ -64,7 +64,7 @@ const surveyJson = {
   }, {
     elements: [{
       type: "radiogroup",
-      name: "civilwar",
+      name: "new",
       title: "What is the Jewish New Year called?",
       choicesOrder: "random",
       choices: [
@@ -75,7 +75,7 @@ const surveyJson = {
   }, {
     elements: [{
       type: "radiogroup",
-      name: "civilwar",
+      name: "salad",
       title: "Which country was the Caesar salad invented in?",
       choicesOrder: "random",
       choices: [
@@ -85,13 +85,13 @@ const surveyJson = {
     }]
   }],
 
-  completedHtml: "<h4>You got <b>{correctAnswers}</b> out of <b>{questionCount}</b> correct answers.</h4>",
+  completedHtml: "<h4>Hey <b>{username}</b>! You got <b>{correctAnswers}</b> out of <b>{questionCount}</b> correct answers.</h4>",
   completedHtmlOnCondition: [{
     expression: "{correctAnswers} == 0",
-    html: "<h4>Unfortunately, none of your answers are correct. Please try again.</h4>"
+    html: "<h4>Unfortunately, none of your answers are correct. Please try again, <b>{username}</b>.</h4>"
   }, {
     expression: "{correctAnswers} == {questionCount}",
-    html: "<h4>Congratulations! You answered all the questions correctly!</h4>"
+    html: "<h4>Congratulations, <b>{username}</b>! You answered all the questions correctly!</h4>"
   }]
 };
 
@@ -101,15 +101,13 @@ function Quiz() {
     <div>
       <div className="container">
         <h1>Hey there!</h1>
-        <h3>Let's start right away!</h3>
-        <p>Finish all questions and check your results in the end 😉</p>
+        <h3>Let's start the MINOR CHASE!</h3>
       </div>
-      <div className="quiz">
+      <div>
       <Survey model={survey} id="surveyContainer" />
       </div>
     </div>
   )
 }
 
-export default Quiz
-
+export default Quiz;

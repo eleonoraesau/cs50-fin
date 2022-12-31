@@ -29,8 +29,13 @@ h1, h2, h3 {
 .body {
   background-color: #DCEDFF;
   margin: 30px;
+  border-radius: 5px;
 }
 
 * {
   font-family: 'Open Sans', sans-serif;
+}
+
+.padded {
+  padding: 20px;
 }

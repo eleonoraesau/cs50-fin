@@ -11,7 +11,7 @@ import {
 
 function Navbar() {
   return (
-    <MDBNavbar expand='lg' light bgColor='light' className='navbar'>
+    <MDBNavbar expand='lg' className='navbar'>
     <MDBContainer fluid>
       <nav aria-label='breadcrumb'>
         <MDBBreadcrumb>
@@ -22,7 +22,7 @@ function Navbar() {
           <Link to="/quiz" className="quiz">Start the Quiz</Link>
           </MDBBreadcrumbItem>
           <MDBBreadcrumbItem active aria-current='page'>
-            <Link to="/results"className="results" >See your results</Link>
+            <Link to="/results"className="results" >Info</Link>
           </MDBBreadcrumbItem>
         </MDBBreadcrumb>
       </nav>
