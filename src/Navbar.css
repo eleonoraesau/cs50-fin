@@ -8,6 +8,7 @@
   z-index: 2;
   position: absolute;
   font-family: 'PT Sans', sans-serif;
+  background-color: #8F91A2;
 }
 
 
@@ -18,4 +19,29 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.home:hover {
+  color: #94B0DA;
+  font-size: 20px;
+  justify-content: space-between;
+  transition: 05.s;
+}
+
+.quiz:hover {
+  color: #94B0DA;
+  font-size: 20px;
+  justify-content: space-between;
+  transition: 05.s;
+}
+
+.results:hover {
+  color: #94B0DA;
+  font-size: 20px;
+  justify-content: space-between;
+  transition: 05.s;
 }

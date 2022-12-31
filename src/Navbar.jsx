@@ -11,12 +11,12 @@ import {
 
 function Navbar() {
   return (
-    <MDBNavbar expand='lg' light bgColor='light'>
+    <MDBNavbar expand='lg' light bgColor='light' className='navbar'>
     <MDBContainer fluid>
       <nav aria-label='breadcrumb'>
         <MDBBreadcrumb>
           <MDBBreadcrumbItem>
-          <Link to="/">Home</Link>
+          <Link to="/" className="home">Home</Link>
           </MDBBreadcrumbItem>
           <MDBBreadcrumbItem>
           <Link to="/quiz" className="quiz">Start the Quiz</Link>

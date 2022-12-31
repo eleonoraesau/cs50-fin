@@ -8,13 +8,13 @@ import { Survey } from 'survey-react-ui';
 StylesManager.applyTheme("defaultV2");
 
 const surveyJson = {
-  title: "QUIZ TIME",
+  // title: "QUIZ TIME",
   showProgressBar: "bottom",
-  showTimerPanel: "top",
+  showTimerPanel: "bottom",
+  startSurveyText: "Start Quiz",
   maxTimeToFinishPage: 20,
   maxTimeToFinish: 50,
   firstPageIsStarted: true,
-  startSurveyText: "Start Quiz",
   pages: [{
     elements: [{
       type: "html",
@@ -30,6 +30,7 @@ const surveyJson = {
       type: "radiogroup",
       name: "civilwar",
       title: "Which two countries share the longest international border?",
+      choicesOrder: "random",
       choices: [
         "Russia and Kazakhstan", "Canada and the USA", "Argentina and Chile", "Mongolia and China"
       ],
@@ -64,7 +65,8 @@ const surveyJson = {
     elements: [{
       type: "radiogroup",
       name: "civilwar",
-      title: "What is the Jewish New Year called?:",
+      title: "What is the Jewish New Year called?",
+      choicesOrder: "random",
       choices: [
         "Rosh Hashanah", "B'ezrat HaShem", "Chag sameach", "Shana Tova"
       ],
@@ -74,7 +76,8 @@ const surveyJson = {
     elements: [{
       type: "radiogroup",
       name: "civilwar",
-      title: "Which country was the Caesar salad invented in?:",
+      title: "Which country was the Caesar salad invented in?",
+      choicesOrder: "random",
       choices: [
         "Spain", "Italy", "Mexico", "USA"
       ],
@@ -98,8 +101,8 @@ function Quiz() {
     <div>
       <div className="container">
         <h1>Hey there!</h1>
-        <h2>Let's start right away!</h2>
-        <h2>Finish all questions and check your results in the end 😉</h2>
+        <h3>Let's start right away!</h3>
+        <p>Finish all questions and check your results in the end 😉</p>
       </div>
       <div className="quiz">
       <Survey model={survey} id="surveyContainer" />
@@ -109,3 +112,4 @@ function Quiz() {
 }
 
 export default Quiz
+

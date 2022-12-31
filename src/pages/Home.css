@@ -4,7 +4,33 @@ h1, h2, h3 {
   padding: 20px;
 }
 
-.button {
+.buttons {
   display: flex;
   justify-content: center;
+  padding: 50px;
+}
+.button {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button:hover {
+  background: #94B0DA;
+}
+
+.minor {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 40px;
+  background: #94B0DA;
+  margin: 30px;
+}
+
+.body {
+  background-color: #DCEDFF;
+  margin: 30px;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
 }
